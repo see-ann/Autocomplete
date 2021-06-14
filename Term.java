@@ -48,6 +48,20 @@ public class Term implements Comparable<Term> {
         public int compare(Term v, Term w) {
             String vQuery;
             String wQuery;
+
+            int index = 0;
+            while (v.query.charAt(index) == w.query.charAt(index)) {
+                if (index == r - 1) break;
+                if ((index == v.query.length() - 1) && (index == w.query.length() - 1)) return 0;
+                else if (index == v.query.length() - 1) return -1;
+                else if (index == w.query.length() - 1) return 1;
+                index++;
+            }
+            if (v.query.charAt(index) < w.query.charAt(index)) return -1;
+            else if (v.query.charAt(index) > w.query.charAt(index)) return 1;
+            else return 0;
+
+            /*
             if (v.query.length() < r) {
                 vQuery = v.query;
             }
@@ -61,6 +75,8 @@ public class Term implements Comparable<Term> {
                 wQuery = w.query.substring(0, r);
             }
             return (vQuery.compareTo(wQuery));
+
+             */
         }
     }
 
