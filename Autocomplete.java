@@ -1,7 +1,7 @@
 /* *****************************************************************************
- *  Name:    Ada Lovelace
- *  NetID:   alovelace
- *  Precept: P00
+ *  Name:    Sean Wang
+ *  NetID:   sw42
+ *  Precept: P04
  *
  *  Partner Name:    Dorothy Johnson Vaughan
  *  Partner NetID:   djvaughan

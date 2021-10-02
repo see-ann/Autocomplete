@@ -13,6 +13,8 @@
  *
  **************************************************************************** */
 
+import edu.princeton.cs.algs4.StdOut;
+
 import java.util.Comparator;
 
 public class Term implements Comparable<Term> {
@@ -109,8 +111,10 @@ public class Term implements Comparable<Term> {
 
     // unit testing (required)
     public static void main(String[] args) {
+        Term t1 = new Term("Sean", 130);
+        Term t2 = new Term("Katie", 100);
 
-
+        StdOut.println("T1: " + t1.toString());
+        StdOut.println("Compare: " + t1.compareTo(t2));
     }
-
 }
