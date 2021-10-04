@@ -27,21 +27,13 @@ public class BinarySearchDeluxe {
 
         int lo = 0;
         int hi = a.length - 1;
+        int comp;
 
         while (lo <= hi) {
             int mid = lo + (hi - lo) / 2;
-            if (comparator.compare(key, a[mid]) < 0) hi = mid - 1;
-            else if (comparator.compare(key, a[mid]) > 0) lo = mid + 1;
-            else {
-                hi = mid;
-
-                while (lo <= hi) {
-                    mid = lo + (hi - lo) / 2;
-                    if (comparator.compare(key, a[mid]) == 0) hi = mid - 1;
-                    else lo = mid + 1;
-                    if (comparator.compare(key, a[lo]) == 0) return lo;
-                }
-            }
+            comp = comparator.compare(key, a[mid]);
+            if (comp <= 0) hi = mid;
+            else if (comp > 0) lo = mid + 1;
         }
         return -1;
 
