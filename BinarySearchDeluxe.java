@@ -27,16 +27,17 @@ public class BinarySearchDeluxe {
 
         int lo = 0;
         int hi = a.length - 1;
-        int comp;
+        int comp = -1;
 
         while (lo <= hi) {
             int mid = lo + (hi - lo) / 2;
             comp = comparator.compare(key, a[mid]);
             if (comp <= 0) hi = mid;
-            else if (comp > 0) lo = mid + 1;
+            else lo = mid + 1;
         }
-        return -1;
 
+        if (comp == 0) return hi;
+        return -1;
     }
 
     // Returns the index of the last key in the sorted array a[]
@@ -46,22 +47,16 @@ public class BinarySearchDeluxe {
 
         int lo = 0;
         int hi = a.length - 1;
+        int comp = -1;
 
         while (lo <= hi) {
             int mid = lo + (hi - lo) / 2;
-            if (comparator.compare(key, a[mid]) < 0) hi = mid - 1;
-            else if (comparator.compare(key, a[mid]) > 0) lo = mid + 1;
-            else {
-                lo = mid;
-
-                while (lo <= hi) {
-                    mid = lo + (hi - lo) / 2;
-                    if (comparator.compare(key, a[mid]) == 0) lo = mid + 1;
-                    else hi = mid - 1;
-                    if (comparator.compare(key, a[hi]) == 0) return hi;
-                }
-            }
+            comp = comparator.compare(key, a[mid]);
+            if (comp >= 0) lo = mid;
+            else hi = mid - 1;
         }
+        
+        if (comp == 0) return lo;
         return -1;
 
     }
