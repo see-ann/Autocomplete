@@ -1,7 +1,7 @@
 /* *****************************************************************************
  *  Name: Sean Wang
- *  NetID:
- *  Precept:
+ *  NetID: sw42
+ *  Precept: P04
  *
  *  Partner Name: Katie Lee
  *  Partner NetID: katieyl
@@ -12,7 +12,6 @@
  **************************************************************************** */
 
 Programming Assignment 3: Autocomplete
-
 
 /* *****************************************************************************
  *  Describe how your firstIndexOf() method in BinarySearchDeluxe.java
@@ -37,11 +36,11 @@ Programming Assignment 3: Autocomplete
  *  select the principal algorithm.
  **************************************************************************** */
 
-Autocomplete() :
+Autocomplete() : mergesort
 
-allMatches() :
+allMatches() : mergesort
 
-numberOfMatches() :
+numberOfMatches() : none
 
 /* *****************************************************************************
  *  How many compares (in the worst case) does each of the operations in the
@@ -53,11 +52,11 @@ numberOfMatches() :
  *  leading coefficients and lower-order terms, e.g., Theta(m^2 + m log n).
  **************************************************************************** */
 
-Autocomplete():     Theta(    )
+Autocomplete():     Theta(n log n)
 
-allMatches():       Theta(    )
+allMatches():       Theta(log n + m log m)
 
-numberOfMatches():  Theta(    )
+numberOfMatches():  Theta( log n )
 
 
 
@@ -87,11 +86,12 @@ NA
  *  the protocol as described on the assignment page. Give one
  *  sentence explaining what each of you contributed.
  **************************************************************************** */
-
+We worked together on coding as well as debugging.
 
 /* *****************************************************************************
  *  List any other comments here. Feel free to provide any feedback
  *  on how much you learned from doing the assignment, and whether
  *  you enjoyed doing it.
  **************************************************************************** */
+N/A
 
